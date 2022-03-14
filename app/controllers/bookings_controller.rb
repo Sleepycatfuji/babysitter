@@ -1,4 +1,4 @@
-class BookingController < ApplicationController
+class BookingsController < ApplicationController
   def index
   end
 
@@ -12,6 +12,9 @@ class BookingController < ApplicationController
   end
 
   def edit
+  end
+
+  def update
   end
 
   def destroy

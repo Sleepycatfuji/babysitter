@@ -1,6 +1,8 @@
-class BabysittersController < ApplicationController
+class ChildrenController < ApplicationController
+  has_many :bookings, dependent: :destroy
+  has_one :parent
+
   def index
-    @babysitters = Babysitter.all
   end
 
   def create
@@ -10,7 +12,6 @@ class BabysittersController < ApplicationController
   end
 
   def show
-    @babysitter = Babysitter.find(params[:id])
   end
 
   def edit

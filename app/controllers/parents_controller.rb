@@ -1,6 +1,5 @@
-class BabysittersController < ApplicationController
+class ParentsController < ApplicationController
   def index
-    @babysitters = Babysitter.all
   end
 
   def create
@@ -10,7 +9,6 @@ class BabysittersController < ApplicationController
   end
 
   def show
-    @babysitter = Babysitter.find(params[:id])
   end
 
   def edit
