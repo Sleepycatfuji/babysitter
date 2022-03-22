@@ -1,19 +1,19 @@
 <div class="container">
-    <h1 class="my-3 text-center">Babysitters</h1>
-  <div class="d-flex">
+  <h1 class="my-3 text-center">Babysitters</h1>
+  <div class="card-holder">
     <% @babysitters.each do |babysitter| %>
       <div class="card-pick mx-3">
         <%= image_tag "babysitter-2.jpeg" %>
-      <div class="card-pick-info">
-      <div class="d-flex justify-content-between">
-        <div>
-          <h2><%= babysitter.name %></h2>
-          <p><%= babysitter.price %></p>
+        <div class="card-pick-info">
+          <div class="d-flex justify-content-between">
+            <div>
+              <h2><%= babysitter.name %></h2>
+              <p><%= babysitter.price %></p>
+            </div>
+            <%= link_to 'More Details', babysitter_path(babysitter), class: 'btn btn-primary'%>
+          </div>
         </div>
-        <%= link_to 'More Details', babysitter_path(babysitter), class: 'btn btn-primary'%>
       </div>
-      </div>
-    </div>
     <% end %>
-    </div>
   </div>
+</div>
