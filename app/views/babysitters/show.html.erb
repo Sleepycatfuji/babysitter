@@ -1,3 +1,8 @@
 <h1>HELLO from
 <%=  @babysitter.name %>
+<%=  @babysitter.id %>
+<%=  @babysitter.price %>
 </h1>
+<%= link_to 'Back', babysitters_path, class: 'btn btn-primary'%>
+<%= link_to 'Edit', edit_babysitter_path(@babysitter), class: 'btn btn-success'%>
+<%= link_to 'Delete', babysitter_path(@babysitter), method: :delete, data: { confirm: "you sure?"}, class: 'btn btn-danger'%>
