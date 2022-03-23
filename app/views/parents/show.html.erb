@@ -7,6 +7,7 @@
     <p><%= @parent.phone_number %></p>
     <%= link_to 'Back', parents_path, class: 'btn btn-primary'%>
     <%= link_to 'Edit', edit_parent_path(@parent), class: 'btn btn-success'%>
+    <%= link_to 'Delete', parent_path(@parent), method: :delete, data: { confirm: "you sure?"}, class: 'btn btn-danger'%>
     <%= link_to 'Contact', "#", class: 'btn btn-primary'%>
   </div>
 </div>
