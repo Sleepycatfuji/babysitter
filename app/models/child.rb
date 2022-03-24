@@ -1,7 +1,7 @@
 class Child < ApplicationRecord
   belongs_to :parent
-  belongs_to :booking
+  has_many :bookings
 
   validates :name, presence: true
-  validates :age, inclusion: 1..13
+  validates :age, inclusion: 2..12
 end
