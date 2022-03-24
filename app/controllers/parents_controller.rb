@@ -4,7 +4,7 @@ class ParentsController < ApplicationController
   end
 
   def create
-    @parent = Parent.find(params[:id])
+    @parent = Parent.new(parent_params)
     if @parent.save
       redirect_to parent_path(@parent)
     else
