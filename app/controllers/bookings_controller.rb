@@ -6,6 +6,7 @@ class BookingsController < ApplicationController
 
   def create
     @parent = Parent.find[:parent_id]
+    @babysitter = Babysiter.find[:babysitter_id]
     @booking = Booking.new(booking_params)
     @booking.parent = @parent
     if @booking.save
