@@ -1,23 +1,20 @@
 class ChildrenController < ApplicationController
-  raise
-  has_one :parent
-  has_many :bookings
-
   def index
-    @child = Children.all # uninitialized constant
+    @children = Child.all
   end
 
   def create
-    @child = Children.find(params[:id])
+    @parent = Parent.new(@parent)
+    @child = Child.new(children_params)
     if @child.save
-      redirect_to child_path(@child)
+      redirect_to parent_path
     else
       render :new
     end
   end
 
   def new
-    @child = Children.new
+    @child = Child.new
   end
 
   def show

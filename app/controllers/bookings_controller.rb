@@ -1,7 +1,7 @@
 class BookingsController < ApplicationController
   def index
     @parent = Parent.all
-    @booking = Bookings.all
+    @booking = Booking.all
   end
 
   def create

@@ -13,15 +13,13 @@
   </head>
 
   <body>
-    <div class="page-frame-content">
-    <div class="page-frame-header">
-    </div>
-    <div class="page-frame-body">
-    <%= yield %>
-    </div>
-    <div class="page-frame-footer">
-    </div>
-  </div>
-
+    <%= render 'applications/navbar' %>
+      <div class="page-frame-content">
+      <div class="page-frame-body">
+        <%= yield %>
+        </div>
+        <div class="page-frame-footer">
+        </div>
+      </div>
   </body>
 </html>
