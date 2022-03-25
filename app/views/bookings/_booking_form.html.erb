@@ -1,0 +1,5 @@
+<%= simple_form_for [@parent, @child] do |f| %>
+  <%= f.input :name, placeholder:'Your Name' %>
+  <%= f.association :child, placeholder:'Child name %>
+  <%= f.submit 'Register', class: 'btn btn-primary mt-2' %>
+<% end %>

@@ -6,6 +6,7 @@ class ChildrenController < ApplicationController
   def create
     @parent = Parent.new(@parent)
     @child = Child.new(children_params)
+    @child.parent = @parent
     if @child.save
       redirect_to parent_path
     else

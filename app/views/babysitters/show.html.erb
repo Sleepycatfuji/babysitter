@@ -1,4 +1,5 @@
-<%= link_to 'Back', babysitters_path, class: 'btn btn-primary'%>
+<div class = "container">
+<h1><%= @babysitter.name %></h1>
 <div class="card-product">
   <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
   <div class="card-product-infos">
@@ -8,6 +9,8 @@
   </div>
 </div>
 
-<%= link_to 'Book', bookings_path(@booking), class: 'btn btn-info'%>
+<%= link_to 'Book', new_booking_path(@booking), class: 'btn btn-info'%>
 <%= link_to 'Edit', edit_babysitter_path(@babysitter), class: 'btn btn-success'%>
 <%= link_to 'Delete', babysitter_path(@babysitter), method: :delete, data: { confirm: "you sure?"}, class: 'btn btn-danger'%>
+<%= link_to 'Back', babysitters_path, class: 'btn btn-primary'%>
+</div>
