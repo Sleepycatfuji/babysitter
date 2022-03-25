@@ -1,13 +1,13 @@
 class ChildrenController < ApplicationController
   def index
-    @children = Child.all # uninitialized constant
+    @children = Child.all
   end
 
   def create
+    @parent = Parent.new(@parent)
     @child = Child.new(children_params)
-    raise
     if @child.save
-      redirect_to children_path
+      redirect_to parent_path
     else
       render :new
     end

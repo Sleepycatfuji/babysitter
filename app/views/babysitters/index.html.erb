@@ -1,6 +1,7 @@
 <div class="container">
   <h1 class="my-3 text-center">Babysitters</h1>
   <%= link_to 'Register', new_babysitter_path, class: 'btn btn-info'%>
+    <%= link_to 'Parents', parents_path, class: 'btn btn-info'%>
   <hr>
   <div class="card-holder">
     <% @babysitters.each do |babysitter| %>
@@ -12,7 +13,9 @@
               <h2><%= babysitter.name %></h2>
               <p><%= babysitter.price %></p>
             </div>
-            <%= link_to 'More Details', babysitter_path(babysitter), class: 'btn btn-primary'%>
+            <div>
+            <%= link_to 'Book', babysitter_path(babysitter), class: 'btn btn-primary'%>
+            </div>
           </div>
         </div>
       </div>

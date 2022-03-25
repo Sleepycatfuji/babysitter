@@ -1,8 +1,13 @@
-<h1>HELLO from
-<%=  @babysitter.name %>
-<%=  @babysitter.id %>
-<%=  @babysitter.price %>
-</h1>
 <%= link_to 'Back', babysitters_path, class: 'btn btn-primary'%>
+<div class="card-product">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+  <div class="card-product-infos">
+    <h2>Name: <%=  @babysitter.name %></h2>
+    <p>ID: <%=  @babysitter.id %></p>
+    <p>Rate: <%=  @babysitter.price %>per hour</p>
+  </div>
+</div>
+
+<%= link_to 'Book', bookings_path(@booking), class: 'btn btn-info'%>
 <%= link_to 'Edit', edit_babysitter_path(@babysitter), class: 'btn btn-success'%>
 <%= link_to 'Delete', babysitter_path(@babysitter), method: :delete, data: { confirm: "you sure?"}, class: 'btn btn-danger'%>

@@ -1,14 +1,25 @@
 <div class="container">
-<div class="card-product">
+<div class="card-product my-3">
   <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
   <div class="card-product-infos">
-    <h1><%= @parent.name %></h1>
+    <h2 class=my-2><%= @parent.name %></h2>
     <p><%= @parent.address %></p>
     <p><%= @parent.phone_number %></p>
     <%= link_to 'Back', parents_path, class: 'btn btn-primary'%>
     <%= link_to 'Edit', edit_parent_path(@parent), class: 'btn btn-success'%>
     <%= link_to 'Delete', parent_path(@parent), method: :delete, data: { confirm: "you sure?"}, class: 'btn btn-danger'%>
-    <%= link_to 'Contact', "#", class: 'btn btn-primary'%>
+    <%= link_to 'Register Child', new_child_path(@child), class: 'btn btn-primary'%>
   </div>
 </div>
+
+<div class="card-product">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+  <div class="card-product-infos">
+    <h2>Children</h2>
+      <p><%= @child.name %></p>
+      <p><%= @child.age %></p>
+      <p><%= @child.notes %></p>
+  </div>
+</div>
+
 </div>

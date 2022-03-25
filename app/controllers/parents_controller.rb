@@ -1,9 +1,11 @@
 class ParentsController < ApplicationController
   def index
     @parents = Parent.all
+    @babysitters = Babysitter.all
   end
 
   def create
+    @child = Child.find(params[:child_id])
     @parent = Parent.new(parent_params)
     if @parent.save
       redirect_to parent_path(@parent)
@@ -18,10 +20,12 @@ class ParentsController < ApplicationController
 
   def show
     @parent = Parent.find(params[:id])
+    @child = Child.new
   end
 
   def edit
     @parent = Parent.find(params[:id])
+    @child = Child.find(params[:id])
   end
 
   def update

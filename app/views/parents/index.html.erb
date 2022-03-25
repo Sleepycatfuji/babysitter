@@ -1,14 +1,19 @@
 <div class="container">
   <h1 class="my-3 text-center">Parents</h1>
   <%= link_to 'Register', new_parent_path, class: 'btn btn-info'%>
+  <%= link_to 'Babysitters', babysitters_path(@babysitters), class: 'btn btn-info'%>
   <hr>
-    <% @parents.each do |parent| %>
+    <% @parents.each do |parent, child| %>
 <div class="card-product">
   <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
   <div class="card-product-infos">
+  <div>
     <h2><%= parent.name %></h2>
     <p><%= parent.address %></p>
+    </div>
+    <div>
   <%= link_to 'More Details', parent_path(parent), class: 'btn btn-primary'%>
+  </div>
   </div>
 </div>
     <% end %>
